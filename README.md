@@ -43,12 +43,6 @@ $$
 \mathrm{STA}(i) > \mathrm{LTA}(i)
 $$
 
-and:
-
-$$
-C(i) > 1
-$$
-
 An event is declared when the characteristic function exceeds the trigger-on threshold:
 
 $$
@@ -63,25 +57,13 @@ $$
 
 Using separate trigger-on and trigger-off thresholds is called **hysteresis**. It prevents repeated trigger switching when the STA/LTA ratio fluctuates near a threshold.
 
-In this project, the default thresholds are:
-
-$$
-T_{\mathrm{on}} = 1.5
-$$
-
-$$
-T_{\mathrm{off}} = 0.5
-$$
-
-The STA and LTA window lengths are set to 5 s and 10 s, respectively. These parameters can be adjusted according to the expected event duration, sampling rate, signal frequency content, and background noise conditions.
-
 ## Noise Test
 
 The noisy STA/LTA example adds zero-mean Gaussian noise to the normalized waveform. The noise level is controlled relative to the waveform amplitude.
 
 A noise level of $1.0$ represents a relatively strong noise condition, where the added noise amplitude is comparable to the normalized waveform amplitude. This provides a simple and reproducible test of STA/LTA performance under reduced signal-to-noise conditions.
 
-As the noise level increases, the detector may produce false triggers, miss weak arrivals, or identify the event onset later than expected. In practical applications, the STA window, LTA window, and trigger thresholds should be selected using waveform data with representative background-noise conditions.
+As the noise level increases, the detector may produce false triggers, miss weak arrivals, or identify the event onset later than expected.
 
 ## Template Matching Principle
 
