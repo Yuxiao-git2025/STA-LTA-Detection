@@ -7,8 +7,7 @@ STA/LTA is a widely used seismic event-detection method. It compares recent sign
 For a waveform sample $x_i$, the short-term average (STA) is computed over a short window:
 
 $$
-\mathrm{STA}(i)
-=
+\mathrm{STA}(i)=
 \frac{1}{N_{\mathrm{STA}}}
 \sum_{j=i-N_{\mathrm{STA}}+1}^{i}
 x_j^2
@@ -19,8 +18,7 @@ where $N_{\mathrm{STA}}$ is the number of samples in the short window.
 The long-term average (LTA) is calculated over a longer window:
 
 $$
-\mathrm{LTA}(i)
-=
+\mathrm{LTA}(i)=
 \frac{1}{N_{\mathrm{LTA}}}
 \sum_{j=i-N_{\mathrm{LTA}}+1}^{i}
 x_j^2
@@ -29,8 +27,7 @@ $$
 The STA/LTA characteristic function is then defined as:
 
 $$
-C(i)
-=
+C(i)=
 \frac{\mathrm{STA}(i)}{\mathrm{LTA}(i)}
 $$
 
@@ -93,8 +90,7 @@ Template matching searches for a known waveform pattern within a longer waveform
 The similarity between the template and a candidate segment can be evaluated using zero-mean normalized cross-correlation:
 
 $$
-R(k)
-=
+R(k)=
 \frac{
 \sum_{j=0}^{L-1}
 \left[x(k+j)-\bar{x}_k\right]
